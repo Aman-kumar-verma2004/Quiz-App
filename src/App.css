@@ -8,6 +8,7 @@
     display: flex;
     background-color: #020230;
     color: white;
+    -webkit-user-select: none;
 }
 .main{
     width: 75%;
@@ -17,6 +18,104 @@
     display: flex;
     flex-direction: column;
 }
+
+.top{
+    height: 50%;
+    position: relative;
+}
+
+.timer{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 5px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    bottom: 10px;
+    left: 80px;
+}
+
+.bottom {
+    height: 50%;
+}
+
+.Quiz{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.question{
+    width: 80%;
+    background: linear-gradient(to right, rgb(1, 1, 90), rgb(68, 1, 68));
+    
+    border: 1px solid gold;
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.answers{
+    width: 100%;
+    display: flex;justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.answer{
+    width: 39%;
+    padding: 10px;
+    text-align: center;
+    background: linear-gradient(to right, rgb(1, 1, 90), rgb(68, 1, 68));
+    border: 1px solid gold;
+    border-radius: 20px;
+    font-size: 20px;
+    margin: 0px 10px 20px 10px;
+    cursor: pointer;
+    -webkit-user-select: none;  
+}
+.answer:hover,
+.answer.active{
+    background: rgb(0, 0, 0);
+}
+
+.answer.correct{
+    animation: correct 3s ease forwards;
+}
+
+@keyframes correct {
+    0%,22%,42%{
+        background: black;
+    }    
+    20%,40%,60%{
+        background: linear-gradient(to right, rgb(1, 1, 90), rgb(68, 1, 68));
+    }62%, 100%{
+        background: green;
+    }
+}
+
+.answer.wrong{
+    animation: wrong 3s ease forwards;
+}
+
+@keyframes wrong {
+    0%,22%,42%{
+        background: black;
+    }    
+    20%,40%,60%{
+        background: linear-gradient(to right, rgb(1, 1, 90), rgb(68, 1, 68));
+    }62%, 100%{
+        background: rgb(255, 5, 5);
+    }
+}
+
 .pyramid{
     width: 25%;
     display: flex;
@@ -39,4 +138,106 @@
  
 .moneyListItem.active{
     background-color: rgb(0, 88, 88);
+}
+
+.endText{
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+   
+}
+
+/* For Tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .app {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .main {
+        width: 100%;
+        order: 1;
+        min-height: 60vh; /* Ensure the main section takes enough space */
+    }
+
+    .pyramid {
+        width: 100%;
+        order: 2;
+        min-height: 40vh;
+        overflow-y: auto; /* Allow scrolling for longer money lists */
+    }
+
+    .moneyListItem {
+        font-size: 16px;
+        padding: 8px 0;
+    }
+
+    .timer {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70px;
+        height: 70px;
+        font-size: 24px;
+        bottom: 15px; /* Ensure visibility */
+    }
+
+    .question {
+        font-size: 24px;
+        padding: 15px;
+    }
+
+    .answer {
+        width: 70%;
+        font-size: 18px;
+        margin: 10px 0;
+    }
+}
+
+/* For Mobile Devices */
+@media (max-width: 767px) {
+    .app {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .main {
+        width: 100%;
+        order: 1;
+        min-height: 60vh;
+    }
+
+    .pyramid {
+        width: 100%;
+        order: 2;
+        min-height: 40vh;
+        overflow-y: auto;
+    }
+
+    .moneyListItem {
+        font-size: 14px;
+        padding: 5px 0;
+    }
+
+    .timer {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 60px;
+        font-size: 22px;
+        bottom: 10px; /* Make sure it's visible properly */
+    }
+
+    .question {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .answer {
+        width: 80%;
+        font-size: 18px;
+        margin: 5px 0;
+    }
 }
