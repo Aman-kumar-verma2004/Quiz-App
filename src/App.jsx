@@ -1,11 +1,12 @@
-
+import './App.css'
 
 function App() {
   
 
   return (
-    <div>
-      Hii there !
+    <div className="app">
+      <div className="main">main</div>
+      <div className="pyramid">Pyramid</div>
     </div>
   )
 }
