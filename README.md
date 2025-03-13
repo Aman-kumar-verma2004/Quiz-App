@@ -19,8 +19,8 @@ This is a React-based quiz game inspired by "Who Wants to Be a Millionaire?". It
 
 1. Clone the repository:
 
-   git clone https://github.com/your-repo/Quiz App.git
-   cd quiz-game-with-timer
+   git clone [https://github.com/your-repo/Quiz App.git](https://github.com/Aman-kumar-verma2004/Quiz-App.git)
+  
    
 
 2. Install dependencies:
@@ -34,6 +34,9 @@ This is a React-based quiz game inspired by "Who Wants to Be a Millionaire?". It
    
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+   ![image](https://github.com/user-attachments/assets/0ee8ac9e-d5fd-4dc0-809e-2617fb838628)
+
 
  Component Breakdown
 
