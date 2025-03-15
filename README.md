@@ -1,12 +1,71 @@
-# React + Vite
+# Quiz Game with Timer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ Description
+This is a React-based quiz game inspired by "Who Wants to Be a Millionaire?". It includes a timer and tracks the user's progress through multiple-choice questions. If the timer hits zero or the user selects a wrong answer, the game ends, and the user earns the amount corresponding to their last correct answer.
 
-Currently, two official plugins are available:
+ Features
+- Multiple-choice questions with correct/incorrect indicators.
+- Timer countdown for each question (default: 30 seconds).
+- Automatic progression to the next question if answered correctly.
+- Game ends when the user runs out of time or selects a wrong answer.
+- Displays earned amount based on the last correct question answered.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ Technologies Used
+- React.js (Hooks: useState, useEffect)
+- JavaScript (ES6+)
+- CSS for styling
 
-## Expanding the ESLint configuration
+ Setup Instructions
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository:
+
+   git clone [https://github.com/your-repo/Quiz App.git](https://github.com/Aman-kumar-verma2004/Quiz-App.git)
+  
+   
+
+2. Install dependencies:
+   
+   npm install
+   
+
+3. Start the development server:
+  
+   npm start
+   
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+   ![image](https://github.com/user-attachments/assets/0ee8ac9e-d5fd-4dc0-809e-2617fb838628)
+
+
+ Component Breakdown
+
+ 1. Quiz Component
+Handles the following functionalities:
+- Sets the current question.
+- Tracks the selected answer.
+- Manages the timer.
+- Implements delay effects for correct/incorrect answers.
+- Ends the game and returns the amount earned when time runs out or an incorrect answer is chosen.
+
+ 2. App Component
+Manages:
+- Overall game state.
+- Question numbers.
+- Stops the game when a wrong answer is picked or time ends.
+
+ Customization
+- Change Timer: Adjust the `setTimer(30)` value in the `Quiz` component.
+- Add Questions: Extend the `data` array with new questions.
+- Update Money List: Modify the `moneyList` array with new rewards.
+
+ Future Enhancements
+- Add sound effects for correct/incorrect answers.
+- Leaderboard to track high scores.
+- Difficulty levels (easy, medium, hard).
+- Dark mode toggle.
+
+
+---
+Made with ❤️ by Aman Kumar Verma
+
